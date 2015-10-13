@@ -20,14 +20,12 @@ public class DateUtil {
         unixTimeToDate(1397952000);//2015-03-29 03:00:00 EEST: Salim including some contributions
         unixTimeToDate(1428796800);//2015-04-05 03:00:00 EEST latest week of salim NO contributions: zero
     }
-    
-    
+
     /*
      it converts from Unix time (in second )to Date
-    http://en.wikipedia.org/wiki/Unix_time 
-    Param: unixTime: in second
-    */
-
+     http://en.wikipedia.org/wiki/Unix_time 
+     Param: unixTime: in second
+     */
     public static Date unixTimeToDate(long unixTime) {
         //long unixSeconds = 1372339860;
         Date date = new Date(unixTime * 1000L); // *1000 is to convert seconds to milliseconds
@@ -65,4 +63,10 @@ public class DateUtil {
         }
         System.out.println("2-----else");
     }
+
+    boolean isDateWithinDates(Date a, Date b) {
+        Date c = null;      // the date in question
+        return a.compareTo(c) * c.compareTo(b) >= 0;
+    }
+
 }

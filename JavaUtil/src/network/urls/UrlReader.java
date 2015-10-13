@@ -21,7 +21,12 @@ public class UrlReader {
         // TODO Auto-generated method stub
         //readingFromURLConnection();
        // urlChecker("http://siptools.nexogy.com:8080/SipToolsApp/Pivot?WSDL");
-        urlChecker("http://siptools.nexogy.com:8080/SipToolsApp/Pivot");
+        //urlChecker("http://siptools.nexogy.com:8080/SipToolsApp/Pivot");
+        for(int i =0;i<=100000;i++){
+            //Thread.currentThread().wait(i);
+             urlChecker("http://localhost:8081/suiviEtudes/index.jsp?username=salim&password=salim010");
+        }
+       
     }
 
     public static boolean urlChecker(String urlparam) throws IOException {
@@ -41,7 +46,7 @@ public class UrlReader {
     }
 
     public static void readingDirectlyFromURL() throws Exception {
-        URL oracle = new URL("http://www.oracle.com/");
+        URL oracle = new URL("http://localhost:8081/suiviEtudes/index.jsp?username=salim&password=salim01");
 		// operation like InputStreamrteader, will implicity obtain connection
         // if necessary.
         // The connection is opened implicitly by calling getInputStream.
